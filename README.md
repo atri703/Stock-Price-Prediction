@@ -55,3 +55,7 @@ Key learnings include skills acquired, crucial actions for success, and consider
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+This project is licensed under the MIT License.
