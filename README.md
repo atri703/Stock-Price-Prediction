@@ -54,17 +54,27 @@ Other libraries that were used are:
 • datetime – To easily separate year, month and day of the given date
 • pandas_datareader.data.get_data_yahoo – To swiftly import data from yfinance and inte-grate it with the pandas library.
 
-## Evaluation
+## Results and Comparisons
 
-Model performance is evaluated using metrics like RMSE, MAPE, and MAE. The results section provides a detailed comparison of the forecasting models.
-
-## Results
-
-The project's results highlight strengths and weaknesses, providing insights into the effectiveness of each forecasting model.
+• For large dataset, the LSTM and FB-Prophet model generally outperformed ARIMA, having lower error values.
+• Based on the smallest RMSE, MAE, and MAPE values, LSTM (Case 1) exhibits the best performance on both datasets. Though FB-Prophet performed significantly better than LSTM (Case 2).
+• Performance for Netflix and Adobe was difficult for any model on both datasets when looking at individual stocks. This suggests that their time series data are more complex.
+• In terms of runtime, FB-Prophet was the fastest, followed by ARIMA and LSTM respectively. Although in general ARIMA requires the least amount of time to train, because we were using Auto-Arima, which must first determine the optimal hyperparameters, ARIMA took longer than FB-Prophet. Lastly, because LSTM is a deep learning model and needs more computing power than other time series models, it took a lot longer to run than the other two models.
+In conclusion, though it forecasts only the next day, LSTM Case 1 is more precise. LSTM Case 2 extends prediction time but decreases accuracy. The FB-Prophet model is best for real-world appli-cations due to its competitive precision and computing economy. It is best for realistic stock price forecasting since it can train models in real time.
 
 ## Learning Points
 
-Key learnings include skills acquired, crucial actions for success, and considerations for future work.
+One of the most valuable takeaways from this project was the substantial improvement in my data analysis and machine learning skills. As master's students in Data Science, I had a theoretical com-prehension of statistics; however, through this project, I also gained a deeper understanding of its practical implications for time-series forecasting.
+In addition, I acquired knowledge of traditional statistical time series models (ARIMA and FB-Prophet). I learned this for this job through a combination of self-study, research, and application. I've read numerous articles on time series models. I also utilized various online public resources, including YouTube, Coursera, and edx. These materials furnished me with relevant practical exam-ples. In the case of ARIMA, I also had to comprehend the application of various hyperparameters (p, d, and q), as well as their meaning and calculation methodologies. I learned the applications how to plot PACF and ACF graphs, as well as what the Augmented Dickey Fuller (ADF) test is.
+In addition, I was able to enhance my web development skills through this project. As a student, I took a web development course, but now I must write backend code in PYTHON for seamless inte-gration with my forecasting models. For this I used a popular PYTHON library known as Streamlit, which takes care of both front-end and backend part of the web app (Streamlit Inc., 2023). I read the official documentation for Streamlit, where I discovered how to install and utilize this library in PY-THON.
+Though I had previously completed numerous LSTM projects during my course, this was the first time this model was used extensively for time series forecasting. I was able to refresh my knowledge of testing numerous hyperparameters for deep learning. In addition, I honed my Python programming
+skills and became proficient with libraries such as pandas, NumPy, scikit-learn, tensorflow, keras, and y_finance.
+Lastly, by calculating all error metrics and comparing the results of each model, I was able to gain a deeper comprehension of each metric's pros and cons, as well as which one should be used in which situation. The same was true for each forecasting model; I now have an improved understanding of each model and greater confidence in my ability to use each model, depending on the circumstances.
+
+## Running the web app
+
+a. Start the web application by executing the following command:
+    streamlit run name_of_app.py
 
 ## Contributing
 
