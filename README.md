@@ -32,7 +32,7 @@ Compare predictions from different models.
 
 Traditional time-series model capturing linear relationships in stock price data.
 
-###LSTM Model
+### LSTM Model
 
 Deep learning model (RNN) capturing complex patterns and dependencies in sequential data.
 
